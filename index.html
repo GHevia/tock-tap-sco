@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe RPS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-board" class="game-board">
+        <div class="row">
+            <button class="cell" onclick="makeMove(this, 0, 0)"></button>
+            <button class="cell" onclick="makeMove(this, 0, 1)"></button>
+            <button class="cell" onclick="makeMove(this, 0, 2)"></button>
+        </div>
+        <div class="row">
+            <button class="cell" onclick="makeMove(this, 1, 0)"></button>
+            <button class="cell" onclick="makeMove(this, 1, 1)"></button>
+            <button class="cell" onclick="makeMove(this, 1, 2)"></button>
+        </div>
+        <div class="row">
+            <button class="cell" onclick="makeMove(this, 2, 0)"></button>
+            <button class="cell" onclick="makeMove(this, 2, 1)"></button>
+            <button class="cell" onclick="makeMove(this, 2, 2)"></button>
+        </div>
+    </div>
+    <div class="move-selection">
+        <button onclick="setCurrentMove('rock')">Rock</button>
+        <button onclick="setCurrentMove('paper')">Paper</button>
+        <button onclick="setCurrentMove('scissors')">Scissors</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
