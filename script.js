@@ -1,3 +1,25 @@
+let currentPlayer = 'rock';
+let playerTurn = 1; // Player 1 starts
+
+function setCurrentMove(move) {
+    currentPlayer = move;
+}
+
+function makeMove(cell, row, col) {
+    if (isValidMove(row, col)) {
+        board[row][col] = currentPlayer;
+        cell.innerHTML = `<img src="path_to_${currentPlayer}_icon" alt="${currentPlayer}">`;
+        if (checkWin()) {
+            alert(`Player ${playerTurn} wins!`);
+            resetBoard();
+        } else {
+            playerTurn = playerTurn === 1 ? 2 : 1;
+            alert(`Player ${playerTurn}'s turn`);
+        }
+    }
+}
+
+
 let currentMove = 'rock';
 const board = [
     [null, null, null],
